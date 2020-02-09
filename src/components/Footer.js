@@ -1,10 +1,13 @@
-import React from 'react'
+import React from "react"
 
 const Footer = () => (
-    <div className='card-footer'>
-      <h4 className='text-center'>The Site</h4>
-      <p className='text-center'>Follow us</p>
+  <footer>
+    <div className="card-footer footer text-center mt-5">
+      <span className="text-muted">
+        © {new Date().getFullYear()}
+      </span>
     </div>
+  </footer>
 )
 
 export default Footer

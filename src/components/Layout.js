@@ -2,11 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Row, Column } from 'reactstrap'
 
-import Header from "./header"
+import Header from "./Header"
 import Footer from './Footer'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageTitle }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -21,6 +22,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className='container'>
+        <h1>{pageTitle}</h1>
         <main>{children}</main>
       </div>
       <Footer/>

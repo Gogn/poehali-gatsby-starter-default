@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Sidebar from "../components/Sidebar"
 import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
@@ -9,9 +9,8 @@ import Img from "gatsby-image"
 export const SinglePost = ({ data }) => {
   const post = data.markdownRemark.frontmatter
   return (
-    <Layout>
+    <Layout pageTitle={post.title}>
       <SEO title={post.title}/>
-      <h1>{post.title}</h1>
       <Row>
         <Col md='8'>
           <Card>
