@@ -1,4 +1,5 @@
 .idea
+
 # Logs
 logs
 *.log
@@ -68,3 +69,6 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+goto-71a3f2151234.json
+gotoeurope-3cc584a5eb73.json
+.env
