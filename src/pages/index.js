@@ -2,12 +2,12 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Post from "../components/Post"
+import Googlemap from "../components/Googlemap"
 
 const IndexPage = () => (
   <Layout pageTitle='Home'>
     <SEO title="Home"/>
-
+    <Googlemap/>
   </Layout>
 )
 
