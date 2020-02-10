@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -22,6 +24,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -34,6 +37,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-transformer-remark'
+
+    {
+      resolve: `gatsby-source-google-sheet`,
+      options: {
+        creds: {
+          client_email: process.env.GS_CLIENT_EMAIL,
+          private_key: process.env.GS_PRIVATE_KEY,
+        },
+        spreadsheetKey: `1AwTb93M0l6fH6J4mXOiA9AavAhNS71GRvInrnJI79mo`,
+        rootName: "GoToEurope", // default is Sheet
+      },
+    },
   ],
 }
